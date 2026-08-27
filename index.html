@@ -247,7 +247,9 @@
   .plan-card.popular .week-dots .wd.on{ background:var(--teal); }
   .freq-note{ font-size:11.5px; color:#8B948E; margin:0 0 14px; font-style:italic; min-height:16px; }
   .plan-card ul{ flex:0 0 auto; }
-  .plan-card > a.btn{ margin-top:auto; }
+  .plan-card-float{ display:flex; flex-direction:column; flex:1; transition:transform .55s var(--ease-soft); }
+  .plan-card-float > a.btn{ margin-top:auto; }
+  .plan-card:hover .plan-card-float{ transform:translateY(-8px) scale(1.015); }
 
   /* Wipe reveal signature section */
   .wipe-section{ background:var(--teal-dark); color:var(--white); overflow:hidden; }
@@ -566,7 +568,7 @@
       <div class="plans-grid">
         <div class="plan-card popular reveal">
           <span class="plan-badge">Most Popular</span>
-          <h3>Weekly</h3>
+          <div class="plan-card-float"><h3>Weekly</h3>
           <div class="freq">4 visits / month</div>
           <div class="week-dots"><span class="wd">M</span>
 <span class="wd">T</span>
@@ -583,10 +585,10 @@
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Weekly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Choose this plan
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-        </div>
+        </div></div>
 <div class="plan-card reveal">
           
-          <h3>Fortnightly</h3>
+          <div class="plan-card-float"><h3>Fortnightly</h3>
           <div class="freq">2 visits / month</div>
           <div class="week-dots"><span class="wd">M</span>
 <span class="wd">T</span>
@@ -603,10 +605,10 @@
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Fortnightly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-        </div>
+        </div></div>
 <div class="plan-card reveal">
           
-          <h3>Twice a Week</h3>
+          <div class="plan-card-float"><h3>Twice a Week</h3>
           <div class="freq">8 visits / month</div>
           <div class="week-dots"><span class="wd on">M</span>
 <span class="wd">T</span>
@@ -623,10 +625,10 @@
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Twice%20a%20Week%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-        </div>
+        </div></div>
 <div class="plan-card reveal">
           
-          <h3>Monthly</h3>
+          <div class="plan-card-float"><h3>Monthly</h3>
           <div class="freq">1 visit / month</div>
           <div class="week-dots"><span class="wd">M</span>
 <span class="wd">T</span>
@@ -643,7 +645,7 @@
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Monthly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-        </div>
+        </div></div>
       </div>
     </div>
   </section>
