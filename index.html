@@ -155,15 +155,15 @@
   /* Services - flexible wrap so odd counts stay centered */
   .services-grid{ display:flex; flex-wrap:wrap; justify-content:center; gap:26px; }
   .service-card{
-    background:var(--cream); border-radius:var(--radius-m); overflow:hidden;
-    transition:transform .55s var(--ease-soft), box-shadow .55s var(--ease-soft);
+    background:var(--cream); border-radius:var(--radius-m);
+    transition:box-shadow .55s var(--ease-soft);
     border:1px solid rgba(26,62,58,.08);
     flex:1 1 300px; max-width:340px;
   }
   .service-card:hover{ box-shadow:0 30px 50px -25px rgba(14,33,30,.28); }
-  .service-card-float{ transition:transform .55s var(--ease-soft); }
+  .service-card-float{ transition:transform .55s var(--ease-soft); border-radius:var(--radius-m); overflow:hidden; }
   .service-card:hover .service-card-float{ transform:translateY(-8px); }
-  .service-card-image{ position:relative; height:150px; overflow:hidden; }
+  .service-card-image{ position:relative; height:150px; overflow:hidden; border-radius:var(--radius-m) var(--radius-m) 0 0; }
   .service-card-image img{
     width:100%; height:100%; object-fit:cover;
     transition:transform .8s var(--ease-soft);
@@ -173,7 +173,7 @@
     content:''; position:absolute; inset:0;
     background:linear-gradient(180deg, rgba(26,62,58,0) 40%, rgba(26,62,58,.55) 100%);
   }
-  .service-card-body{ padding:24px 26px 30px; }
+  .service-card-body{ padding:24px 26px 30px; border-radius:0 0 var(--radius-m) var(--radius-m); }
   .service-card .icon-wrap{
     width:50px; height:50px; border-radius:14px; background:var(--white);
     display:flex; align-items:center; justify-content:center; margin-top:-45px; margin-bottom:18px;
