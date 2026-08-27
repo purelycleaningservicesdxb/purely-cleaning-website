@@ -161,6 +161,8 @@
     flex:1 1 300px; max-width:340px;
   }
   .service-card:hover{ box-shadow:0 30px 50px -25px rgba(14,33,30,.28); }
+  .service-card-float{ transition:transform .55s var(--ease-soft); }
+  .service-card:hover .service-card-float{ transform:translateY(-8px); }
   .service-card-image{ position:relative; height:150px; overflow:hidden; }
   .service-card-image img{
     width:100%; height:100%; object-fit:cover;
@@ -203,9 +205,9 @@
   .property-chip:hover span.chip-label{ color:var(--white); }
   .property-chip .chip-more{
     max-width:0; opacity:0; overflow:hidden; white-space:nowrap; font-size:12.5px; font-weight:500; color:rgba(255,255,255,.9);
-    transition:max-width .6s var(--ease-soft), opacity .5s var(--ease-soft) .05s;
+    transition:max-width .9s var(--ease-soft), opacity .7s var(--ease-soft) .1s;
   }
-  .property-chip:hover .chip-more{ max-width:220px; opacity:1; }
+  .property-chip:hover .chip-more{ max-width:170px; opacity:1; }
   .property-chip .chip-more span{ padding-left:10px; display:inline-block; }
   @media(max-width:640px){ .property-strip .inner{ border-radius:24px; } .property-strip .label{ width:100%; text-align:center; margin:0 0 4px; } }
 
@@ -496,50 +498,50 @@
       </div>
       <div class="services-grid">
         <div class="service-card reveal">
-          <div class="service-card-image"><img src="image-2.jpg" alt="Regular Cleaning"></div>
+          <div class="service-card-float"><div class="service-card-image"><img src="image-2.jpg" alt="Regular Cleaning"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v4H4zM6 8v12h12V8"/><path d="M10 12h4"/></svg></div>
           <h3>Regular Cleaning</h3>
           <p>Weekly or bi-weekly maintenance that keeps your home consistently spotless, on a schedule that suits you.</p>
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20Regular%20Cleaning." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-        </div>
+        </div></div>
 <div class="service-card reveal">
-          <div class="service-card-image"><img src="image-3.jpg" alt="Deep Cleaning"></div>
+          <div class="service-card-float"><div class="service-card-image"><img src="image-3.jpg" alt="Deep Cleaning"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l7-14 3 6 3-4 3 12H4z"/></svg></div>
           <h3>Deep Cleaning</h3>
           <p>A thorough, top-to-bottom reset for the corners regular cleaning doesn't reach. Perfect for a proper refresh.</p>
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20Deep%20Cleaning." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-        </div>
+        </div></div>
 <div class="service-card reveal">
-          <div class="service-card-image"><img src="image-4.jpg" alt="Holiday Home Turnover"></div>
+          <div class="service-card-float"><div class="service-card-image"><img src="image-4.jpg" alt="Holiday Home Turnover"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div>
           <h3>Holiday Home Turnover</h3>
           <p>Fast, reliable turnarounds between guests, so every check-in feels like the first.</p>
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20Holiday%20Home%20Turnover%20cleaning." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-        </div>
+        </div></div>
 <div class="service-card reveal">
-          <div class="service-card-image"><img src="image-5.jpg" alt="Move-In / Move-Out"></div>
+          <div class="service-card-float"><div class="service-card-image"><img src="image-5.jpg" alt="Move-In / Move-Out"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10l9-7 9 7"/><path d="M5 9v11h14V9"/></svg></div>
           <h3>Move-In / Move-Out</h3>
           <p>A spotless handover, every time, whether you're welcoming a new home or leaving one behind.</p>
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20a%20Move-In%20/%20Move-Out%20clean." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-        </div>
+        </div></div>
 <div class="service-card reveal">
-          <div class="service-card-image"><img src="image-6.jpg" alt="Post-Renovation Clean"></div>
+          <div class="service-card-float"><div class="service-card-image"><img src="image-6.jpg" alt="Post-Renovation Clean"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3l7 7-8.5 8.5a3 3 0 01-4.2 0l-2.8-2.8a3 3 0 010-4.2L14 3z"/><path d="M6 21H3v-3"/></svg></div>
           <h3>Post-Renovation Clean</h3>
           <p>Dust, debris, and residue cleared properly after building or renovation work, so your space is truly ready.</p>
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20a%20Post-Renovation%20Clean." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
-        </div>
+        </div></div>
       </div>
     </div>
     <div class="container property-strip">
@@ -578,7 +580,9 @@
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Same cleaner every visit</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Priority booking slots</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Best for busy households</li></ul>
-          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Weekly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Choose this plan</a>
+          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Weekly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Choose this plan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
 <div class="plan-card reveal">
           
@@ -596,7 +600,9 @@
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Same cleaner every visit</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Great for steady upkeep</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Flexible day selection</li></ul>
-          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Fortnightly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan</a>
+          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Fortnightly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
 <div class="plan-card reveal">
           
@@ -614,7 +620,9 @@
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Same cleaner every visit</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Ideal for larger homes</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Maximum consistency</li></ul>
-          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Twice%20a%20Week%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan</a>
+          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Twice%20a%20Week%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
 <div class="plan-card reveal">
           
@@ -632,7 +640,9 @@
           <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>Same cleaner every visit</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>A lighter-touch refresh</li>
 <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>No long-term commitment</li></ul>
-          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Monthly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan</a>
+          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20set%20up%20the%20Monthly%20cleaning%20plan." target="_blank" rel="noopener" class="btn btn-outline btn-sm">Choose this plan
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
       </div>
     </div>
