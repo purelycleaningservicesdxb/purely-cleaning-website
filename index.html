@@ -457,6 +457,69 @@
   @media (prefers-reduced-motion: reduce){
     *:not(.trust-track){ animation-duration:.001ms !important; transition-duration:.001ms !important; }
   }
+
+/* ============================================================
+   MOBILE-ONLY OVERRIDES (max-width: 640px)
+   Desktop layout is untouched below this point.
+   ============================================================ */
+@media(max-width:640px){
+
+  /* --- 1. Property chips: vertical stack, expand downward not sideways --- */
+  .property-strip .inner{ flex-direction:column; align-items:stretch; gap:10px; }
+  .property-chip{
+    display:grid; grid-template-columns:auto 1fr; align-items:center; column-gap:10px;
+    width:100%; border-radius:16px; padding:14px 16px;
+  }
+  .property-chip .chip-label{ white-space:nowrap; }
+  .property-chip .chip-more{
+    grid-column:1 / -1; max-width:none; width:100%; max-height:0; opacity:0;
+    white-space:normal; transition:max-height .5s var(--ease-soft), opacity .4s var(--ease-soft) .05s, margin-top .5s var(--ease-soft);
+  }
+  .property-chip .chip-more span{ padding-left:0; display:block; }
+  .property-chip:hover .chip-more{ max-height:60px; opacity:1; margin-top:8px; }
+
+  /* --- 2. Recurring plans: horizontal swipeable carousel, next card peeks --- */
+  .plans-grid{
+    display:flex; flex-wrap:nowrap; overflow-x:auto; scroll-snap-type:x mandatory;
+    gap:16px; padding:6px 32px 14px; margin:0 -22px; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .plans-grid::-webkit-scrollbar{ display:none; }
+  .plan-card{ flex:0 0 80%; scroll-snap-align:center; }
+
+  /* --- 3. How it works: same horizontal carousel treatment as plans --- */
+  .route-wrap{ display:none; }
+  .steps{
+    display:flex; flex-wrap:nowrap; overflow-x:auto; scroll-snap-type:x mandatory;
+    gap:16px; padding:6px 32px 14px; margin:0 -22px; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .steps::-webkit-scrollbar{ display:none; }
+  .step{ flex:0 0 80%; scroll-snap-align:center; text-align:center; background:var(--white); border-radius:var(--radius-m); padding:26px 22px; border:1px solid rgba(26,62,58,.08); }
+
+  /* --- 4. Full mobile centering pass: text, buttons, images --- */
+  .section-head{ text-align:center; margin-left:auto; margin-right:auto; }
+  .eyebrow{ justify-content:center; }
+  .service-card-body{ text-align:center; }
+  .service-card .icon-wrap{ margin-left:auto; margin-right:auto; }
+  .service-card .learn{ justify-content:center; }
+  .plan-card-float{ text-align:center; align-items:center; }
+  .plan-card ul li{ justify-content:center; }
+  .plan-card-float > a.btn{ margin-left:auto; margin-right:auto; }
+  .week-dots{ justify-content:center; }
+  .area-card{ text-align:center; }
+  .area-list li{ justify-content:center; }
+  .pin-badge{ margin-left:auto; margin-right:auto; }
+  .area-grid > div:last-child{ text-align:center; }
+  .area-grid > div:last-child .btn{ margin-left:auto; margin-right:auto; }
+  .checker{ margin-left:auto; margin-right:auto; }
+  .offer-section .container{ text-align:center; }
+  .footer-top{ flex-direction:column; align-items:center; text-align:center; gap:32px; }
+  .footer-brand{ justify-content:center; }
+  .footer-cols{ justify-content:center; gap:50px; }
+  .footer-bottom{ flex-direction:column; text-align:center; gap:8px; }
+  .checker-result-inner{ text-align:left; }
+}
 </style>
 </head>
 <body>
