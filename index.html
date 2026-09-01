@@ -207,6 +207,10 @@
     flex:1 1 300px; max-width:340px;
   }
   .service-card:hover{ box-shadow:0 30px 50px -25px rgba(14,33,30,.28); }
+  .service-card.reveal{ transform:translateY(36px) scale(.94); transition:opacity .7s var(--ease-soft), transform .7s var(--ease-soft); }
+  .service-card.reveal.in{ transform:translateY(0) scale(1); }
+  .service-card.reveal{ opacity:0; transform:translateY(36px) scale(.96); transition:opacity .7s var(--ease-soft), transform .7s var(--ease-soft); }
+  .service-card.reveal.in{ opacity:1; transform:translateY(0) scale(1); }
   .service-card-float{ transition:transform .55s var(--ease-soft); border-radius:var(--radius-m); overflow:hidden; }
   .service-card:hover .service-card-float{ transform:translateY(-8px); }
   .service-card-image{ position:relative; height:150px; overflow:hidden; border-radius:var(--radius-m) var(--radius-m) 0 0; }
@@ -234,6 +238,7 @@
 
   /* Property types strip - compact, not a full section */
   .property-strip{ padding:6px 0 20px; }
+  .property-plain-mobile{ display:none; }
   .property-strip .inner{
     display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:14px 10px;
     background:transparent; border-radius:100px; padding:18px 30px;
@@ -464,19 +469,12 @@
    ============================================================ */
 @media(max-width:640px){
 
-  /* --- 1. Property chips: vertical stack, expand downward not sideways --- */
-  .property-strip .inner{ flex-direction:column; align-items:stretch; gap:10px; }
-  .property-chip{
-    display:grid; grid-template-columns:auto 1fr; align-items:center; column-gap:10px;
-    width:100%; border-radius:16px; padding:14px 16px;
-  }
-  .property-chip .chip-label{ white-space:nowrap; }
-  .property-chip .chip-more{
-    grid-column:1 / -1; max-width:none; width:100%; max-height:0; opacity:0;
-    white-space:normal; transition:max-height .5s var(--ease-soft), opacity .4s var(--ease-soft) .05s, margin-top .5s var(--ease-soft);
-  }
-  .property-chip .chip-more span{ padding-left:0; display:block; }
-  .property-chip:hover .chip-more{ max-height:60px; opacity:1; margin-top:8px; }
+  /* --- 1. Property chips: replace interactive pills with a simple inline text list --- */
+  .property-strip .inner{ display:none; }
+  .property-plain-mobile{ display:block; text-align:center; }
+  .property-plain-mobile .label{ display:block; margin-bottom:8px; margin-right:0; }
+  .property-plain-mobile .plain-list{ font-size:15px; font-weight:600; color:var(--teal); }
+  .property-plain-mobile .mdot{ color:var(--sage); font-weight:400; margin:0 2px; }
 
   /* --- 2. Recurring plans: horizontal swipeable carousel, next card peeks --- */
   .plans-grid{
@@ -604,7 +602,7 @@
         <p>Five ways to keep your space exactly how you want it. Message us for a tailored quote, every home is different.</p>
       </div>
       <div class="services-grid">
-        <div class="service-card reveal">
+        <div class="service-card reveal" style="transition-delay:0ms">
           <div class="service-card-float"><div class="service-card-image"><img src="image-2.jpg" alt="Vacuuming a carpet during a regular home cleaning visit in Dubai"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v4H4zM6 8v12h12V8"/><path d="M10 12h4"/></svg></div>
@@ -613,7 +611,7 @@
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20Regular%20Cleaning." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div></div>
-<div class="service-card reveal">
+<div class="service-card reveal" style="transition-delay:110ms">
           <div class="service-card-float"><div class="service-card-image"><img src="image-3.jpg" alt="Deep cleaning a surface with eco-friendly products"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20l7-14 3 6 3-4 3 12H4z"/></svg></div>
@@ -622,7 +620,7 @@
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20Deep%20Cleaning." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div></div>
-<div class="service-card reveal">
+<div class="service-card reveal" style="transition-delay:220ms">
           <div class="service-card-float"><div class="service-card-image"><img src="image-4.jpg" alt="Neatly folded towels prepared for a holiday home turnover clean"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div>
@@ -631,7 +629,7 @@
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20Holiday%20Home%20Turnover%20cleaning." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div></div>
-<div class="service-card reveal">
+<div class="service-card reveal" style="transition-delay:330ms">
           <div class="service-card-float"><div class="service-card-image"><img src="image-5.jpg" alt="Cleaning supplies used for a move-in move-out clean"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10l9-7 9 7"/><path d="M5 9v11h14V9"/></svg></div>
@@ -640,7 +638,7 @@
           <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20a%20quote%20for%20a%20Move-In%20/%20Move-Out%20clean." target="_blank" rel="noopener" class="learn">Get a quote <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </div></div>
-<div class="service-card reveal">
+<div class="service-card reveal" style="transition-delay:440ms">
           <div class="service-card-float"><div class="service-card-image"><img src="image-6.jpg" alt="Scrubbing a surface clean after renovation work"></div>
           <div class="service-card-body">
           <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3l7 7-8.5 8.5a3 3 0 01-4.2 0l-2.8-2.8a3 3 0 010-4.2L14 3z"/><path d="M6 21H3v-3"/></svg></div>
@@ -658,6 +656,10 @@
 <div class="property-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V6l8-3 8 3v15"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01M15 9h.01M9 13h.01M15 13h.01"/></svg><span class="chip-label">Apartments</span><span class="chip-more"><span>Any size, any floor</span></span></div>
 <div class="property-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21V10l6-5 6 5v11"/><path d="M9 21v-6h4v6"/><path d="M15 21v-8l6 3v5"/></svg><span class="chip-label">Townhouses</span><span class="chip-more"><span>Multi-level care</span></span></div>
 <div class="property-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12l9-8 9 8"/><path d="M5 10v11h14V10"/><path d="M9 21v-6h6v6"/></svg><span class="chip-label">Villas</span><span class="chip-more"><span>Full property service</span></span></div>
+      </div>
+      <div class="property-plain-mobile">
+        <span class="label">We clean</span>
+        <div class="plain-list">Studios <span class="mdot">&middot;</span> Apartments <span class="mdot">&middot;</span> Townhouses <span class="mdot">&middot;</span> Villas</div>
       </div>
     </div>
   </section>
