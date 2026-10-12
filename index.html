@@ -416,6 +416,35 @@
   .offer-price sup{ font-size:.32em; font-weight:500; }
   .offer-note{ font-size:12.5px; color:rgba(255,255,255,.55); margin-bottom:20px; }
 
+
+  .offer-section{ padding:72px 0; }
+  .offer-section h2{ margin:16px auto 10px; max-width:720px; }
+  .offer-sub{ color:rgba(255,255,255,.75); font-size:15.5px; max-width:520px; margin:0 auto 34px; }
+  .offer-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:900px; margin:0 auto; text-align:left; }
+  .offer-card{ background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); border-radius:22px; padding:28px 26px 26px; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); display:flex; flex-direction:column; }
+  .offer-card-head{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px; }
+  .offer-card h3{ font-family:'Fraunces',serif; color:var(--white); font-size:24px; font-weight:600; margin:0; }
+  .offer-tag{ order:2; background:var(--white); color:var(--teal); font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:5px 12px; border-radius:100px; white-space:nowrap; }
+  .offer-rows{ list-style:none; margin:0 0 14px; padding:0; }
+  .offer-rows li{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:13px 0; border-top:1px solid rgba(255,255,255,.16); font-size:15px; color:rgba(255,255,255,.9); }
+  .op-prices{ display:flex; align-items:baseline; gap:10px; }
+  .op-prices s{ font-size:13px; color:rgba(255,255,255,.5); }
+  .op-prices b{ font-family:'Fraunces',serif; font-size:24px; font-weight:600; color:var(--white); }
+  .offer-card-note{ font-size:12.5px; color:rgba(255,255,255,.6); margin:0 0 20px; }
+  .offer-card .btn{ margin-top:auto; justify-content:center; width:100%; }
+  .offer-terms{ max-width:900px; margin:22px auto 0; background:rgba(0,0,0,.22); border-radius:18px; padding:22px 26px; text-align:left; }
+  .offer-terms-title{ font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-bottom:12px; }
+  .offer-terms ul{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:10px 28px; }
+  .offer-terms li{ display:flex; gap:10px; align-items:flex-start; font-size:13.5px; line-height:1.45; color:rgba(255,255,255,.82); }
+  .offer-terms li svg{ width:16px; height:16px; flex-shrink:0; margin-top:2px; color:#9FD8C9; }
+  @media(max-width:768px){
+    .offer-section{ padding:52px 0; }
+    .offer-grid{ grid-template-columns:1fr; gap:16px; }
+    .offer-card{ padding:24px 20px 22px; }
+    .offer-terms{ padding:20px; }
+    .offer-terms ul{ grid-template-columns:1fr; }
+  }
+
   .faq-list{ max-width:760px; margin:0 auto; }
   .faq-item{ border-bottom:1px solid rgba(26,62,58,.14); }
   .faq-q{
@@ -850,15 +879,27 @@
       <path d="M100 20 C70 70, 40 100, 40 130 C40 165, 68 185, 100 185 C132 185, 160 165, 160 130 C160 100, 130 70, 100 20 Z" stroke="#FFFFFF" stroke-width="3"/>
     </svg>
     <div class="container">
-      <div class="offer-badge reveal">NOW BOOKING, LIMITED SLOTS</div>
-      <div class="offer-price reveal" style="--i:1">AED 99<sup>/first clean</sup></div>
-      <div class="offer-note reveal" style="--i:2">3-hour minimum, capped intro slots for our first customers</div>
-      <h2 class="reveal" style="--i:3">Book your first clean while slots last.</h2>
-      <p class="reveal" style="--i:4">We're keeping bookings limited while we onboard our first clients properly. Message us on WhatsApp to grab your spot.</p>
-      <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20book%20my%20first%20clean%20with%20PurelyCleaningServices" target="_blank" rel="noopener" class="btn btn-light reveal" style="--i:5">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.6-.7c.2-.3.4-.2.6-.1l1.7.8c.2.1.3.2.4.3.1.2.1.9-.1 1.6z"/></svg>
-        Book on WhatsApp
-      </a>
+      <div class="offer-badge reveal">NOW BOOKING &middot; 2 WEEKS ONLY</div>
+      <h2 class="reveal" style="--i:1">Your first clean, at a first-time price.</h2>
+      <div class="offer-sub reveal" style="--i:2">New customers only. Pick your home, book on WhatsApp, and we'll confirm your slot.</div>
+      <div class="offer-grid">
+        <div class="offer-card reveal" style="--i:3">
+          <div class="offer-card-head"><span class="offer-tag">Offer 1</span><h3>Apartments</h3></div>
+          <ul class="offer-rows"><li><span class="op-name">Studio</span><span class="op-prices"><s>AED 100</s><b>AED 79</b></span></li><li><span class="op-name">1 Bedroom</span><span class="op-prices"><s>AED 125</s><b>AED 99</b></span></li><li><span class="op-name">2 Bedroom</span><span class="op-prices"><s>AED 175</s><b>AED 119</b></span></li></ul>
+          <div class="offer-card-note">First clean price, studio to 2 bedroom apartments.</div>
+          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20book%20the%20apartment%20first%20clean%20offer%20with%20PurelyCleaningServices" target="_blank" rel="noopener" class="btn btn-light"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.6-.7c.2-.3.4-.2.6-.1l1.7.8c.2.1.3.2.4.3.1.2.1.9-.1 1.6z"/></svg>Book on WhatsApp</a>
+        </div>
+        <div class="offer-card reveal" style="--i:4">
+          <div class="offer-card-head"><span class="offer-tag">Offer 2</span><h3>Townhouses &amp; Villas</h3></div>
+          <ul class="offer-rows"><li><span class="op-name">3 Bed townhouse</span><span class="op-prices"><s>AED 225</s><b>AED 149</b></span></li><li><span class="op-name">3 Bed villa</span><span class="op-prices"><s>AED 275</s><b>AED 199</b></span></li><li><span class="op-name">4 Bed villa</span><span class="op-prices"><s>AED 325</s><b>AED 249</b></span></li><li><span class="op-name">5 Bed villa</span><span class="op-prices"><s>AED 375</s><b>AED 299</b></span></li></ul>
+          <div class="offer-card-note">First clean price, larger homes may need a custom quote.</div>
+          <a href="https://wa.me/971585820766?text=Hi%21%20I%27d%20like%20to%20book%20the%20townhouse%2Fvilla%20first%20clean%20offer%20with%20PurelyCleaningServices" target="_blank" rel="noopener" class="btn btn-light"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.2 1-2.5c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.6-.7c.2-.3.4-.2.6-.1l1.7.8c.2.1.3.2.4.3.1.2.1.9-.1 1.6z"/></svg>Book on WhatsApp</a>
+        </div>
+      </div>
+      <div class="offer-terms reveal" style="--i:5">
+        <div class="offer-terms-title">Offer terms</div>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>New customers only</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>One use per customer, household and address</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Offer ends 26 Oct 2026, booking must be made by then</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Regular cleaning only, deep cleans priced separately</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Standard clean for your property size, extra time billed at AED 50/hr</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5"/></svg>Eco-friendly products included</li></ul>
+      </div>
     </div>
   </section>
 
